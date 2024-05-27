@@ -11,7 +11,7 @@ This project converts [`mupdf-android-viewer`](https://github.com/ArtifexSoftwar
 ## How to Build
 1. Clone the repository
 ```bash
-$ git clone https://github.com/tuxxon/mupdf-viewer.flutter.git
+$ git clone --recursive https://github.com/tuxxon/mupdf-viewer.flutter.git
 ```
 
 2. Build the APK
