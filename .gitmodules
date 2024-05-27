@@ -1,0 +1,3 @@
+[submodule "android/libs/mupdf-android-viewer"]
+	path = android/libs/mupdf-android-viewer
+	url = https://github.com/ArtifexSoftware/mupdf-android-viewer.git

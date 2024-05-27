@@ -1,0 +1,25 @@
+allprojects {
+
+    repositories {
+        if (project.hasProperty('MAVEN_REPO')) {
+            maven { url MAVEN_REPO }
+        } else {
+            maven { url "file://${System.properties['user.home']}/MAVEN" }
+        }
+        maven { url 'https://maven.ghostscript.com/' }
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
